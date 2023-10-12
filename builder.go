@@ -51,7 +51,7 @@ func Delete(builder any, name string) any {
 }
 
 // Append returns a copy of the given builder with new value(s) appended to the
-// named list. If the value was previously unset or set with Set (even to a e.g.
+// named list. If the value was previously unset or set with Set (even to an e.g.
 // slice values), the new value(s) will be appended to an empty list.
 func Append(builder any, name string, vs ...any) any {
 	return Extend(builder, name, vs)

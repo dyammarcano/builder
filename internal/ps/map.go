@@ -67,7 +67,7 @@ var nilMap = &tree{}
 
 // Recursively set nilMap's subtrees to point at itself.
 // This eliminates all nil pointers in the map structure.
-// All map nodes are created by cloning this structure so
+// All map nodes are created by cloning this structure, so
 // they avoid the problem too.
 func init() {
 	for i := range nilMap.children {
@@ -148,7 +148,7 @@ func recalculateCount(m *tree) {
 	for _, t := range m.children {
 		count += t.Size()
 	}
-	m.count = count + 1 // add one to count ourself
+	m.count = count + 1 // add one to count ourselves
 }
 
 func (t *tree) Delete(key string) Map {
